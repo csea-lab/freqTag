@@ -37,7 +37,7 @@ Two example pipelines are provided: "**freqtag\_pipeline\_example1**", and "**fr
 ### 2) Example data sets: 
 Two data sets are used for demonstration as mentioned above: 
 
-exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400 ms pre- and 7400 ms post-stimulus onset. 500Hz sample rate. During the final 5 seconds, two stimuli flickered at 5Hz and 6Hz. It is used in the example1 pipeline above. 
+exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400 ms pre- and 7400 ms post-stimulus onset, collected at 500Hz sample rate. During the final 5 seconds, two stimuli flickered at 5Hz and 6Hz. It is used in the example1 pipeline above. 
 
 exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 seconds in which two stimuli flickered at 5Hz and 6Hz. More information is given in the companion paper. It is used in the example2 pipeline above. 
 
@@ -45,9 +45,9 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 
 #### function [amp, phase, freqs, fftcomp] = freqtag_FFT(data, fsamp)
 
-% This function applies the Discrete Fourier Transform on a 2-D (M-by-N) data array in matlab workspace.
-% Inputs: 
-% data = sensors by time points 2-D matrix
+% This function applies the Discrete Fourier Transform on a 2-D (M-by-N) data array in matlab workspace.\
+% Inputs:\
+% data = sensors by time points 2-D matrix\
 % fsamp = sampling rate in Hz
 % Outputs: 
 % amplitude spectrum (amp)
