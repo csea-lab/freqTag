@@ -62,7 +62,7 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 % Inputs:\
 % data = sensors by time points by trials 3-D matrix\
 % fsamp = sampling rate in Hz\
-% Outputs:\ 
+% Outputs:\
 % mean amplitude spectrum (amp)\
 % frequencies available in the spectrum (freqs)\
 % complex Fourier components (fftcomp)
@@ -70,7 +70,7 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 #### function [hilbamp, phase, complex] = freqtag_HILB(data, taggingfreq, filterorder, sensor2plot, plotflag, fsamp)
 
 % this function implements a simple filter-Hilbert analysis of a 2-D data array (sensors by tim points) in the matlab workspace. It outputs the time-varying ssVEP amplitude, the time-varying phase, and the complex components of the time-varying spectrum, at the tagging frequency (real and imaginary) for each time point.\ 
-% Inputs:\ 
+% Inputs:\
 % data = sensors by time points 2-D matrix (if data has trials as 3rd\
 % dimension, use mean to average across trials)\
 % taggingfreq = is the tagging frequency\
@@ -84,14 +84,14 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 
 % this function performs a sliding window averaging analysis as described for example in Morgan et al. 1996; Wieser 
 % et al., 2016\
-% Inputs:\ 
+% Inputs:\
 % data = sensors by time points 2-D matrix\
 % bslvec = sample points to be used for baseline subtraction\
 % ssvepvec = a vector containing the sample points to be used in sliding window analysis\
 % foi = driving frequency of interest in Hz\
 % fsampnew = new sample rate (if needed)\
 % fsamp = sampling rate in Hz\
-% Outputs:\ 
+% Outputs:\
 % ssVEP amplitude at the frequency of interest for each trial (trialamp)\
 % three dimensional array of sliding window averages for each trial, in the time domain (winmat3d)\
 % the phase stability average of complex coefficients across moving windows\
