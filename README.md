@@ -10,8 +10,9 @@ The goal of the toolbox is to illustrate some principles of frequency-domain ana
 
 To install, download this folder and add to the matlab path using the add path button or the addpath command. 
 
-##Overview of the contents: 
-###1) Example pipelines: 
+## Overview of the contents: 
+
+### 1) Example pipelines: 
 The toolbox comes with two example pipelines that combine several of the functions supplied here to accomplish typical tasks. The example pipelines are provided in two formats: 
 
 a) as Matlab Live scripts (to be opened using the matlab livescript editor), which contain background information and explanation along with the code, in a formatted document, where individual cells can be successively executed by clicking on the side bar on the left; 
@@ -35,15 +36,15 @@ freqtag\_slidewin.m requires the function bslcorr.m, which is also provided in t
 exampledata\_2 is the dataset required to run through this script
 
 
-2) Example data sets: 
+### 2) Example data sets: 
 Two data sets are used for demonstration as mentioned above: 
 
 exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400 ms pre- and 7400 ms post-stimulus onset. 500Hz sample rate. During the final 5 seconds, two stimuli flickered at 5Hz and 6Hz.
 
 exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 seconds in which two stimuli flickered at 5Hz and 6Hz. More information is given in the companion paper.
 
-3) Function description
-=======
+### 3) Function description
+
 freqtag_pipeline_example1.m
 
 -This script demonstrates how users calculate basic parameters that are needed for setting inputs and interpreting outputs.   
@@ -56,10 +57,10 @@ freqtag_pipeline_example2.m
 -It calls several other functions such as: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_slidewin.m , freqtag_simpleSNR
 -exampledata_2 is the infant dataset provided to run through this script
 -freqtag_slidewin.m requires the function bslcorr.m, which is also provided in this folder. 
->>>>>>> 9c719cd588b7dd3486c8e20b9105dbc8f070ebd8
 
 
 
 
-4) Dependencies: 
+
+### 4) Dependencies: 
 The toolbox requires bslcorr.m and MATLAB functions:  mean, plot, fft, angle, abs, hilbert, butter, line, floor, round, repeat, find, round, squeeze, double, resample, zeros.   
