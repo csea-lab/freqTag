@@ -69,7 +69,7 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 
 #### function [hilbamp, phase, complex] = freqtag_HILB(data, taggingfreq, filterorder, sensor2plot, plotflag, fsamp)
 
-% this function implements a simple filter-Hilbert analysis of a 2-D data array (sensors by tim points) in the matlab workspace. It outputs the time-varying ssVEP amplitude, the time-varying phase, and the complex components of the time-varying spectrum, at the tagging frequency (real and imaginary) for each time point.\ 
+% this function implements a simple filter-Hilbert analysis of a 2-D data array (sensors by tim points) in the matlab workspace. It outputs the time-varying ssVEP amplitude, the time-varying phase, and the complex components of the time-varying spectrum, at the tagging frequency (real and imaginary) for each time point.\
 % Inputs:\
 % data = sensors by time points 2-D matrix (if data has trials as 3rd\
 % dimension, use mean to average across trials)\
