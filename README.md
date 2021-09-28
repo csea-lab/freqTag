@@ -13,12 +13,12 @@ Overview of the contents:
 
 Two example pipelines are provided: freqtag_pipeline_example1, and freqtag_pipeline_example2 
 
-freqtag_pipeline_example1.m 
+freqtag_pipeline_example1.m: 
 This script demonstrates how users calculate basic parameters that are needed for setting inputs and interpreting outputs.   
 It illustrates the use of specific functions for use in frequency tagging analysis: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_HILB.m
 Example data set exampledata_1 is the dataset provided to run through this script. I may be downloaded here: 
 	
-freqtag_pipeline_example2.m
+freqtag_pipeline_example2.m: 
 This script demonstrates an example pipeline for analysis of single trials or studies with few trials, using sliding window analysis. 
 It calls several other functions such as: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_slidewin.m , freqtag_simpleSNR
 exampledata_2 is the infant dataset provided to run through this script
