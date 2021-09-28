@@ -53,11 +53,11 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 % amplitude spectrum (amp)\
 % phase spectrum\
 % frequencies available in the spectrum (freqs)\
-% complex Fourier components (fftcomp)\
+% complex Fourier components (fftcomp)
 
 #### function [amp, freqs, fftcomp] = freqtag_FFT3D(data, fsamp)
 
-% This function applies the Discrete Fourier Transform on a 3-D data array, sensors by time points by trials, in matlab workspace.
+% This function applies the Discrete Fourier Transform on a 3-D data array, sensors by time points by trials, in matlab workspace.\
 % It transforms each trial into the spectral domain and averages the single-trial amplitude spectra to yield one output spectrum.\ 
 % Inputs:\ 
 % data = sensors by time points by trials 3-D matrix\
