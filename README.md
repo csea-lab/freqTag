@@ -45,5 +45,6 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 
 
 
+
 ###4 Dependency: 
 The toolbox requires bslcorr.m and MATLAB functions:  mean, plot, fft, angle, abs, hilbert, butter, line, floor, round, repeat, find, round, squeeze, double, resample, zeros.   
