@@ -14,19 +14,20 @@ Overview of the contents:
 Two example pipelines are provided: freqtag_pipeline_example1, and freqtag_pipeline_example2 
 
 freqtag_pipeline_example1.m 
-	⁃	This script demonstrates how users calculate basic parameters that are needed for setting inputs and interpreting outputs.   
-	⁃	It the illustrates the use of specific functions for use in frequency tagging analysis: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_HILB.m
-	⁃	exampledata_1 is the dataset provided to run through this script. I may be downloaded here: 
+This script demonstrates how users calculate basic parameters that are needed for setting inputs and interpreting outputs.   
+It illustrates the use of specific functions for use in frequency tagging analysis: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_HILB.m
+Example data set exampledata_1 is the dataset provided to run through this script. I may be downloaded here: 
 	
 freqtag_pipeline_example2.m
-	⁃	This script demonstrates an example pipeline for analysis of single trials or studies with few trials, using sliding window analysis. 
-	⁃	It calls several other functions such as: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_slidewin.m , freqtag_simpleSNR
-	⁃	exampledata_2 is the infant dataset provided to run through this script
-	⁃	freqtag_slidewin.m requires the function bslcorr.m, which is also provided in this folder. 
+This script demonstrates an example pipeline for analysis of single trials or studies with few trials, using sliding window analysis. 
+It calls several other functions such as: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_slidewin.m , freqtag_simpleSNR
+exampledata_2 is the infant dataset provided to run through this script
+freqtag_slidewin.m requires the function bslcorr.m, which is also provided in this folder. 
 
-	2) Two data sets are used for demonstration, an dthey can be downloaded here.  
-	⁃	exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400ms pre- and 7400ms post-stimulus onset. 500Hz sample rate. During the last 5-s two stimuli flickered at 5Hz and 6Hz.
-	⁃	exampledata_2 is an EEG epoched data, containing 15 trials. It comprises of 5-s in which two stimuli flickered at 5Hz and 6Hz.
+2) Two data sets are used for demonstration as mentioned above 
+exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400 ms pre- and 7400 ms post-stimulus onset. 500Hz sample rate. During the last 5-s two stimuli flickered at 5Hz and 6Hz.
+
+exampledata_2 is an EEG epoched data, containing 15 trials. It comprises of 5-s in which two stimuli flickered at 5Hz and 6Hz.
 
 summary of the functions, by function. 
 systematic inout and output
