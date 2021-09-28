@@ -65,20 +65,20 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 % Outputs:\ 
 % mean amplitude spectrum (amp)\
 % frequencies available in the spectrum (freqs)\
-% complex Fourier components (fftcomp)\
+% complex Fourier components (fftcomp)
 
 #### function [hilbamp, phase, complex] = freqtag_HILB(data, taggingfreq, filterorder, sensor2plot, plotflag, fsamp)
 
 % this function implements a simple filter-Hilbert analysis of a 2-D data array (sensors by tim points) in the matlab workspace. It outputs the time-varying ssVEP amplitude, the time-varying phase, and the complex components of the time-varying spectrum, at the tagging frequency (real and imaginary) for each time point. 
 
-%data = sensors by time points 2-D matrix (if data has trials as 3rd\
-%dimension, use mean to average across trials)\
-%taggingfreq = is the tagging frequency\
-%filterorder = is the order of the filter to be aplied on the data\
-%sensor2plot = is the sensor to be plotted with the phase shifted time series,\
-%the absolute value of the data and the analytical hilbert transformed time series\
-%plotfag = is the option to plot or not to plot the above information\
-%fsamp = is the sampling rate\ 
+% data = sensors by time points 2-D matrix (if data has trials as 3rd\
+% dimension, use mean to average across trials)\
+% taggingfreq = is the tagging frequency\
+% filterorder = is the order of the filter to be aplied on the data\
+% sensor2plot = is the sensor to be plotted with the phase shifted time series,\
+% the absolute value of the data and the analytical hilbert transformed time series\
+% plotfag = is the option to plot or not to plot the above information\
+% fsamp = is the sampling rate 
 
 #### function [trialamp,winmat3d,phasestabmat,trialSNR] = freqtag_slidewin(data, plotflag, bslvec, ssvepvec, foi, fsampnew, fsamp, outname)
 
@@ -95,7 +95,7 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 % ssVEP amplitude at the frequency of interest for each trial (trialamp)\
 % three dimensional array of sliding window averages for each trial, in the time domain (winmat3d)\
 % the phase stability average of complex coefficients across moving windows\
-% ssVEP signal-to-noise ratio in decibels at the frequency of interest for each trial (trialamp)\
+% ssVEP signal-to-noise ratio in decibels at the frequency of interest for each trial (trialamp)
  
 ### 4) Dependencies: 
 The toolbox requires helper functions bslcorr.m (baseline correction in th etime domain) and freqtag_regressionMat (detrending based on linear regression). A simple function for calculating signal-to-noise ratios is also used (freqtag_simpleSNR.m). These functions are provided in this folder. The users is directed to the helpfiles and example scripts for documentation. The toolbox uses a number of built-in MATLAB functions:  mean, plot, fft, angle, abs, hilbert, butter, line, floor, round, repeat, find, round, squeeze, double, resample, zeros.   
