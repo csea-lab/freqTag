@@ -25,17 +25,17 @@ Two example pipelines are provided: "**freqtag\_pipeline\_example1**", and "**fr
 
 -This script demonstrates how users calculate basic parameters that are needed for setting inputs and interpreting outputs.   
 -It illustrates the use of specific functions for use in frequency tagging analysis: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_HILB.m
--Example data set exampledata_1 is the dataset provided to run through this script. I may be downloaded here: 
+-Example data set exampledata_1 is the dataset provided to run through this script. It may be downloaded here: https://osf.io/pmge9/
 	
 #### freqtag_pipeline_example2.m and freqtag_pipeline_example2.mlx (liveScript version)
 
 -This script demonstrates an example pipeline for analysis of single trials or studies with few trials, using sliding window analysis. 
 -It calls several other functions such as: freqtag_FFT.m , freqtag_3DFFT.m , freqtag_slidewin.m , freqtag_simpleSNR
--exampledata_2 is the dataset provided to run through this script
+-exampledata_2 is the dataset provided to run through this script. It may be downloaded here: https://osf.io/pmge9/
 
 
 ### 2) Example data sets: 
-Two data sets are used for demonstration as mentioned above: 
+Two data sets are used for demonstration as mentioned above. They may be retrived from the OSF site for this toolbox: https://osf.io/pmge9/
 
 exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400 ms pre- and 7400 ms post-stimulus onset, collected at 500Hz sample rate. During the final 5 seconds, two stimuli flickered at 5Hz and 6Hz. It is used in the example1 pipeline above. 
 
