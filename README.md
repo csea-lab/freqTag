@@ -58,7 +58,7 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 #### function [amp, freqs, fftcomp] = freqtag_FFT3D(data, fsamp)
 
 % This function applies the Discrete Fourier Transform on a 3-D data array, sensors by time points by trials, in matlab workspace.
-% It transforms each trial into the spectral domain and averages the single-trial amplitude spectra to yield one output spectrum. 
+% It transforms each trial into the spectral domain and averages the single-trial amplitude spectra to yield one output spectrum.\ 
 % Inputs:\ 
 % data = sensors by time points by trials 3-D matrix\
 % fsamp = sampling rate in Hz\
@@ -69,8 +69,8 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 
 #### function [hilbamp, phase, complex] = freqtag_HILB(data, taggingfreq, filterorder, sensor2plot, plotflag, fsamp)
 
-% this function implements a simple filter-Hilbert analysis of a 2-D data array (sensors by tim points) in the matlab workspace. It outputs the time-varying ssVEP amplitude, the time-varying phase, and the complex components of the time-varying spectrum, at the tagging frequency (real and imaginary) for each time point. 
-
+% this function implements a simple filter-Hilbert analysis of a 2-D data array (sensors by tim points) in the matlab workspace. It outputs the time-varying ssVEP amplitude, the time-varying phase, and the complex components of the time-varying spectrum, at the tagging frequency (real and imaginary) for each time point.\ 
+% Inputs:\ 
 % data = sensors by time points 2-D matrix (if data has trials as 3rd\
 % dimension, use mean to average across trials)\
 % taggingfreq = is the tagging frequency\
@@ -83,7 +83,7 @@ exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 sec
 #### function [trialamp,winmat3d,phasestabmat,trialSNR] = freqtag_slidewin(data, plotflag, bslvec, ssvepvec, foi, fsampnew, fsamp, outname)
 
 % this function performs a sliding window averaging analysis as described for example in Morgan et al. 1996; Wieser 
-% et al., 2016
+% et al., 2016\
 % Inputs:\ 
 % data = sensors by time points 2-D matrix\
 % bslvec = sample points to be used for baseline subtraction\
