@@ -1,7 +1,5 @@
 # freqTag
 
-##The FreqTag Toolbox
-=======
 The FreqTag Toolbox
 
 This toolbox contains a suite of matlab functions used to process ssVEP data in frequency tagging experiments. A companion paper can be found here as a preprint: 
@@ -37,14 +35,14 @@ freqtag\_slidewin.m requires the function bslcorr.m, which is also provided in t
 exampledata\_2 is the dataset required to run through this script
 
 
-###2) Example data sets: 
+2) Example data sets: 
 Two data sets are used for demonstration as mentioned above: 
 
 exampledata_1 is an EEG (129 electrodes) epoched data, containing 39 trials. It comprises -400 ms pre- and 7400 ms post-stimulus onset. 500Hz sample rate. During the final 5 seconds, two stimuli flickered at 5Hz and 6Hz.
 
 exampledata_2 also is EEG epoched data, containing 15 trials. It comprises 5 seconds in which two stimuli flickered at 5Hz and 6Hz. More information is given in the companion paper.
 
-###3) Function description
+3) Function description
 =======
 freqtag_pipeline_example1.m
 
@@ -63,5 +61,5 @@ freqtag_pipeline_example2.m
 
 
 
-###4 Dependency: 
+4) Dependencies: 
 The toolbox requires bslcorr.m and MATLAB functions:  mean, plot, fft, angle, abs, hilbert, butter, line, floor, round, repeat, find, round, squeeze, double, resample, zeros.   
