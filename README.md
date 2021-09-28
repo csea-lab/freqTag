@@ -1,9 +1,9 @@
 # freqTag
-<<<<<<< HEAD
+
 ##The FreqTag Toolbox
 =======
 The FreqTag Toolbox
->>>>>>> 9c719cd588b7dd3486c8e20b9105dbc8f070ebd8
+
 This toolbox contains a suite of matlab functions used to process ssVEP data in frequency tagging experiments. A companion paper can be found here as a preprint: 
 
 Example data needed for following along with the examples in the companion paper can be downloaded here: 
@@ -16,8 +16,6 @@ To install, download this folder and add to the matlab path using the add path b
 ###1) Example pipelines: 
 The toolbox comes with two example pipelines that combine several of the functions supplied here to accomplish typical tasks. The example pipelines are provided in two formats: 
 
-
-<<<<<<< HEAD
 a) as Matlab Live scripts (to be opened using the matlab livescript editor), which contain background information and explanation along with the code, in a formatted document, where individual cells can be successively executed by clicking on the side bar on the left; 
 
 b) as matlab scripts, with comments supplied as part of the code, to be executed cell by cell, for example by right clicking and selecting "execute cell".
