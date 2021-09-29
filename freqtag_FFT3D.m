@@ -38,7 +38,7 @@ for trial = 1: size(dataset,3)       % Start of the trial loop
                  specsum = specsum + meanpower;
              end
              
-        fftcomp(:, :, trial) = complex(1:round(NFFT./2,:))';
+        fftcomp(:, :, trial) = complex(1:round(NFFT./2),:)';
 
 end                                         % End of the trial loop
 
