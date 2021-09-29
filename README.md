@@ -4,7 +4,7 @@ The FreqTag Toolbox
 
 This toolbox contains a suite of matlab functions used to process ssVEP data in frequency tagging experiments. A companion paper can be found here as a preprint: 
 
-Example data needed for following along with the examples in the companion paper can be downloaded here: 
+Example data needed for following along with the examples in the companion paper can be downloaded here: https://osf.io/pmge9/
 
 The goal of the toolbox is to illustrate some principles of frequency-domain analyses of EEG data. The focus is on frequency tagging ssVEP studies, in which EEG is recorded as observers view streams of periodically modulated (e.g. flickering) visual stimuli. 
 
