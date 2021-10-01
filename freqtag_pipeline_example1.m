@@ -6,7 +6,9 @@
 % - Each trial contains  400ms pre- and 7400ms post-stimulus onset;
 % 
 % - During each trial, two spatially overlapping stimuli flicker at different 
-% frequencies (5 Hz and 6 Hz), 
+% frequencies (5 Hz and 6 Hz),
+
+% for easy usage, navigate matlab into the freqtag folder from https://github.com/csea-lab/freqTag
 
 clear
 close('all')
