@@ -1,6 +1,8 @@
 % simulsidebands
-% A simulation that examines the impact of power in nearby bands on the sliding window procedure
+% A simple simulation that examines the impact of power in nearby bands on the sliding window procedure
 % implemented in this toolbox, using freqtag_slidewin
+% evrything is hard coded, and white noise is used, to facilitate running
+% on any system, regardless of matlab version and install 
 
 
 % clear the outputs 
@@ -15,15 +17,15 @@ freq2 = 6;
 
 % allow for variable noise and signal magnitude
 
-noiselevel = 10;
+noiselevel = 20;
 
-for run = 1:5
-  for siglevel1 = 1:20
+for run = 1:50
+  for siglevel1 = 1:30
     for siglevel2 = 1:20
 
         % first, create a simulated trial with freq1 Hz ssVEP, plus noise
 
-        sinef1 = sin(2*pi*time*freq1) .* siglevel1./5; 
+        sinef1 = sin(2*pi*time*freq1) .* siglevel1./6; 
 
         sigf1 = sinef1 + rand(1, length(sinef1)).*noiselevel; % white noise is used here, but can be supplied with other noise
 
@@ -39,7 +41,7 @@ for run = 1:5
 
         sigsum = sigf1+sigf2;
 
-        plot(time, sigsum), pause(1)
+        % plot(time, sigsum), pause(1)
 
         [trialmagf1(siglevel1, siglevel2, run),winmat3d,phasestabmat,trialSNRf1(siglevel1, siglevel2, run)] = freqtag_slidewin(sigsum, 0, 1:3000, 1:3000, freq1, 600, 500, 'test');
         [trialmagf2(siglevel1, siglevel2, run),winmat3d,phasestabmat,trialSNRf2(siglevel1, siglevel2, run)] = freqtag_slidewin(sigsum, 0, 1:3000, 1:3000, freq2, 600, 500, 'test');
@@ -49,9 +51,7 @@ for run = 1:5
 end
 
 figure
-subplot(1,2,1), contourf(squeeze(mean(trialmagf1,3)))
-subplot(1,2,2), contourf(squeeze(mean(trialmagf2,3)))
+subplot(1,2,1), contourf((1:30)./6, (1:20)./5, squeeze(mean(trialmagf1,3))'), colorbar
+subplot(1,2,2), contourf((1:30)./6, (1:20)./5, squeeze(mean(trialmagf2,3))'), colorbar
 
-figure
-subplot(1,2,1), contourf(squeeze(mean(trialSNRf1,3)))
-subplot(1,2,2), contourf(squeeze(mean(trialSNRf2,3)))
+
