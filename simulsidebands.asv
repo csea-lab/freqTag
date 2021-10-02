@@ -54,12 +54,12 @@ origSNR1 = ((1:20)./3)./noiselevel;
 origSNR2 = ((1:15)./2)./noiselevel;
 
 figure
-subplot(1,2,1), plot(origSNR2, squeeze(mean(trialmagf1,3))), legend(num2str(origSNR1'))
-subplot(1,2,2), plot(origSNR1, squeeze(mean(trialmagf2,3))), legend(num2str(origSNR2'))
+subplot(1,2,1), plot(origSNR2, squeeze(mean(trialmagf1,3))), legend(origSNR1)
+subplot(1,2,2), plot(origSNR1, squeeze(mean(trialmagf2,3))), legend
 
 figure
-subplot(1,2,1), plot(origSNR2, squeeze(mean(trialSNRf1,3))), legend(num2str(origSNR1'))
-subplot(1,2,2), plot(origSNR1, squeeze(mean(trialSNRf2,3))), legend(num2str(origSNR2'))
+subplot(1,2,1), plot(origSNR2, squeeze(mean(trialSNRf1,3))), legend
+subplot(1,2,2), plot(origSNR1, squeeze(mean(trialSNRf2,3))), legend
 
 
 
