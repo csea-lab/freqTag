@@ -8,6 +8,7 @@ clear
 % define the outputs 
 trialmagf1 =[]; 
 trialmagf2 =[]; 
+
 % define the frequencies
 freq1 = 6;
 freq2 = 5;
@@ -17,7 +18,7 @@ freq2 = 5;
 
 % allow for variable noise and signal magnitude
 
-noiselevel = 2;
+noiselevel = 20;
 
 for run = 1:50
   for siglevel1 = 1:20
@@ -41,7 +42,7 @@ for run = 1:50
 
         sigsum = sigf1+sigf2;
 
-        % plot(time, sigsum), pause(1)
+        %plot(time, sigsum), pause(1)
 
         [trialmagf1(siglevel1, siglevel2, run),~,~,trialSNRf1(siglevel1, siglevel2, run)] = freqtag_slidewin(sigsum, 0, 1:3000, 1:3000, freq1, 600, 500, 'test');
         [trialmagf2(siglevel1, siglevel2, run),~,~,trialSNRf2(siglevel1, siglevel2, run)] = freqtag_slidewin(sigsum, 0, 1:3000, 1:3000, freq2, 600, 500, 'test');
