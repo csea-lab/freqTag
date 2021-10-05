@@ -60,7 +60,7 @@ xlabel(['SNR at tag 2 (' num2str(freq2) 'Hz)']), ylabel(['SNR for tag 1 (' num2s
 title('Tag 1 SNR by Tag 2 SNR') 
 subplot(1,2,2), plot(origSNR1, squeeze(mean(trialmagf2,3))), legend(num2str(origSNR2'))
 xlabel(['SNR at tag 1 (' num2str(freq1) 'Hz)']), ylabel(['SNR for tag 2 (' num2str(freq2) 'Hz)'])
-title('Tag 1 SNR by Tag 2 SNR') 
+title('Tag 2 SNR by Tag 1 SNR') 
 
 figure
 subplot(1,2,1), plot(origSNR2, squeeze(mean(trialSNRf1,3))), legend(num2str(origSNR1'))
