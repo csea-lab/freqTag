@@ -8,7 +8,6 @@ clear
 % define the outputs 
 trialmagf1 =[]; 
 trialmagf2 =[]; 
-
 % define the frequencies
 freq1 = 6;
 freq2 = 5;
@@ -18,7 +17,7 @@ freq2 = 5;
 
 % allow for variable noise and signal magnitude
 
-noiselevel = 20;
+noiselevel = 2;
 
 for run = 1:50
   for siglevel1 = 1:20
@@ -42,7 +41,7 @@ for run = 1:50
 
         sigsum = sigf1+sigf2;
 
-        %plot(time, sigsum), pause(1)
+        % plot(time, sigsum), pause(1)
 
         [trialmagf1(siglevel1, siglevel2, run),~,~,trialSNRf1(siglevel1, siglevel2, run)] = freqtag_slidewin(sigsum, 0, 1:3000, 1:3000, freq1, 600, 500, 'test');
         [trialmagf2(siglevel1, siglevel2, run),~,~,trialSNRf2(siglevel1, siglevel2, run)] = freqtag_slidewin(sigsum, 0, 1:3000, 1:3000, freq2, 600, 500, 'test');
@@ -56,11 +55,11 @@ origSNR2 = ((1:15)./2)./noiselevel;
 
 figure
 subplot(1,2,1), plot(origSNR2, squeeze(mean(trialmagf1,3))), legend(num2str(origSNR1')),
-xlabel(['SNR at tag 2 (' num2str(freq2) 'Hz)']), ylabel(['SNR for tag 1 (' num2str(freq1) 'Hz)']),
-title('Tag 1 SNR by Tag 2 SNR') 
+xlabel(['SNR for tag 2: ' num2str(freq2) 'Hz']), ylabel(['SNR for tag 1: ' num2str(freq1) 'Hz']),
+title('Tag 1 ssvep ') 
 subplot(1,2,2), plot(origSNR1, squeeze(mean(trialmagf2,3))), legend(num2str(origSNR2'))
-xlabel(['SNR at tag 1 (' num2str(freq1) 'Hz)']), ylabel(['SNR for tag 2 (' num2str(freq2) 'Hz)'])
-title('Tag 1 SNR by Tag 2 SNR') 
+xlabel(['SNR for tag 1: ' num2str(freq1) 'Hz']), ylabel(['SNR for tag 2: ' num2str(freq2) 'Hz'])
+
 
 figure
 subplot(1,2,1), plot(origSNR2, squeeze(mean(trialSNRf1,3))), legend(num2str(origSNR1'))
