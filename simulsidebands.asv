@@ -17,8 +17,7 @@ freq2 = 5;
  time = 0:0.002:6; % 6 second trials, sampled at 500 Hz
 
 % allow for variable noise and signal magnitude in the source signal (ie., the
-% simulated trial). This will be used to complete the "source SNR" origSNR
-% in the simulated data, before windowing
+% simulated trial)
 
 noiselevel = 20;
 
@@ -53,31 +52,29 @@ for run = 1:50
   end
 end
 
-origSNR1 = ((1:20)./3)./noiselevel; % an estimate of the original SNR in the input signal
+origSNR1 = ((1:20)./3)./noiselevel;
 origSNR2 = ((1:15)./2)./noiselevel;
 
 figure
 subplot(1,2,1), plot(origSNR2, squeeze(mean(trialmagf1,3))), 
-l1 = legend(num2str(origSNR1')); title(l1, 'Input SNR at Tag 1')
-xlabel(['Input SNR at tag 2 (' num2str(freq2) 'Hz)']), ylabel(['Amplitude for tag 1 (' num2str(freq1) 'Hz)']),
-title('Tag 1 amplitude by Tag 2 input SNR') 
+l1 = legend(num2str(origSNR1')); title(l1, 'Source SNR at Tag 1')
+xlabel(['Source SNR at tag 2 (' num2str(freq2) 'Hz)']), ylabel(['Amplitude for tag 1 (' num2str(freq1) 'Hz)']),
+title('Tag 1 amplitude by Tag 2 signal strength') 
 
 subplot(1,2,2), plot(origSNR1, squeeze(mean(trialmagf2,3))),
-l1 = legend(num2str(origSNR2')); title(l1, 'Input SNR at Tag 2')
-xlabel(['Input SNR at tag 1 (' num2str(freq1) 'Hz)']), ylabel(['Amplitude for tag 2 (' num2str(freq2) 'Hz)'])
-title('Tag 2 amplitude by Tag 1 input SNR') 
+l1 = legend(num2str(origSNR2')); title(l1, 'Source SNR at Tag 2')
+xlabel(['SNR at tag 1 (' num2str(freq1) 'Hz)']), ylabel(['Amplitude for tag 2 (' num2str(freq2) 'Hz)'])
+title('Tag 2 amplitude by Tag 1 signal strength') 
 
 figure
 subplot(1,2,1), plot(origSNR2, squeeze(mean(trialSNRf1,3))), legend(num2str(origSNR1'))
-l1 = legend(num2str(origSNR1')); title(l1, 'Input SNR at Tag 1')
-xlabel(['Input SNR at tag 2 (' num2str(freq2) 'Hz)']), ylabel(['Output SNR for tag 1 (' num2str(freq1) 'Hz)']),
-title('Tag 1 output SNR by Tag 2 input SNR') 
+l1 = legend(num2str(origSNR1')); title(l1, 'Source SNR at Tag 1')
+xlabel(['SNR at tag 2 (' num2str(freq2) 'Hz)']), ylabel(['SNR for tag 1 (' num2str(freq1) 'Hz)']),
+title('Tag 1 SNR by Tag 2 signal strength') 
 
-
-subplot(1,2,2), plot(origSNR1, squeeze(mean(trialSNRf2,3))), 
-l1 = legend(num2str(origSNR2')); title(l1, 'Input SNR at Tag 2')
-xlabel([' Input SNR at tag 1 (' num2str(freq1) 'Hz)']), ylabel(['Output SNR for tag 2 (' num2str(freq2) 'Hz)'])
-title('Tag 2 output SNR by Tag 1 input SNR') 
+subplot(1,2,2), plot(origSNR1, squeeze(mean(trialSNRf2,3))), legend(num2str(origSNR2'))
+xlabel(['SNR at tag 1 (' num2str(freq1) 'Hz)']), ylabel(['SNR for tag 2 (' num2str(freq2) 'Hz)'])
+title('Tag 2 SNR by Tag 1 signal strength') 
 
 
 
